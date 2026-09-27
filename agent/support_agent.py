@@ -38,7 +38,7 @@ def checkout(order: Order) -> str:
     """Charge the order and return a receipt id."""
     if order.total_cents <= 0:
         raise ValueError("nothing to charge")
-    return f"receipt-{order.id}-{order.total_cents}{order.currency}"
+    return f"receipt-{order.id}-{order.amount_cents}{order.currency}"
 
 
 def refund_request(order: Order) -> str:
