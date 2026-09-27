@@ -35,7 +35,7 @@ class Order:
 
 # ── tool handlers ─────────────────────────────────────────────────────────
 def checkout(order: Order) -> str:
-    """Charge the order and return a receipt id."""
+    """Charge the order and return its receipt id (format: receipt-<id>-<amount>)."""
     if order.total_cents <= 0:
         raise ValueError("nothing to charge")
     return f"receipt-{order.id}-{order.total_cents}{order.currency}"
