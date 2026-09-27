@@ -1,0 +1,10 @@
+# AgentSeism contract for the example agent.
+runner:
+  command: "{python} agent/run.py --task {task_file} --out {artifact_dir}"
+evaluator:
+  command: "{python} agent/check.py {artifact_dir}"
+features:
+  task_success:
+    gate: true
+    regression_threshold: 0.10
+    capability_regression: true

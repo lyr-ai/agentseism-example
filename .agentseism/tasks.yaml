@@ -1,0 +1,7 @@
+- tasks/checkout.json
+- tasks/refund-request.json
+- tasks/order-status.json
+- tasks/address-change.json
+- tasks/product-search.json
+- tasks/return-label.json
+- tasks/gift-card.json

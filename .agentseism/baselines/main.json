@@ -1,0 +1,928 @@
+{
+  "arm": "baseline",
+  "contract_sha256": "57a5ae1fdf2d4a99",
+  "effective_contract": {
+    "comparability": {
+      "mismatch_verdict": "INCOMPARABLE",
+      "require_same": [
+        "model_revision",
+        "serving_runtime",
+        "dependency_lock",
+        "prompt_version",
+        "scaffold_version"
+      ]
+    },
+    "contract_version": "surface-1",
+    "decision": {
+      "aggregation": "any"
+    },
+    "defaults_version": "1.0.0",
+    "diagnostics": {
+      "progress_profile": {
+        "verdict_authority": "none"
+      },
+      "tool_error_profile": {
+        "verdict_authority": "none"
+      },
+      "trace_divergence": {
+        "verdict_authority": "none"
+      }
+    },
+    "evaluator": {
+      "command": "{python} agent/check.py {artifact_dir}"
+    },
+    "features": {
+      "task_success": {
+        "capability_regression": {
+          "alpha": 0.05,
+          "assumes": "independent_clean_runs",
+          "defaults": "capability-2",
+          "eligibility": {
+            "baseline_success_min": 0.875
+          },
+          "independent_unit": "run_within_scenario",
+          "invalid_policy": "exclude_task",
+          "minimum_evidence": {
+            "trials_per_condition": 8
+          },
+          "multiplicity": "bonferroni_over_suite",
+          "practical_threshold": 0.5,
+          "test": "fisher_exact_one_sided",
+          "warn_threshold": 0.375
+        },
+        "effect": "risk_difference",
+        "evaluator": "swebench_resolved",
+        "gate": true,
+        "independent_unit": "scenario",
+        "invalid_policy": "stop",
+        "minimum_evidence": {
+          "scenarios": 5,
+          "trials_per_condition": 3
+        },
+        "practical_threshold": 0.1,
+        "regression_direction": "decrease",
+        "role": "outcome",
+        "uncertainty": "paired_bootstrap"
+      }
+    },
+    "protocol_version": 1,
+    "rca": {
+      "run_only_when": "REGRESSION"
+    },
+    "resolved_schema_version": 1,
+    "runner": {
+      "command": "{python} agent/run.py --task {task_file} --out {artifact_dir}"
+    },
+    "study_mode": "confirmatory",
+    "verdict_authority": "release"
+  },
+  "evaluator": {
+    "command": "{python} agent/check.py {artifact_dir}"
+  },
+  "field_sources": {
+    "comparability.require_same": "default",
+    "diagnostics.progress_profile.verdict_authority": "forced",
+    "diagnostics.tool_error_profile.verdict_authority": "forced",
+    "diagnostics.trace_divergence.verdict_authority": "forced",
+    "task_success.capability_regression": "default",
+    "task_success.effect": "default",
+    "task_success.evaluator": "default",
+    "task_success.gate": "author",
+    "task_success.independent_unit": "default",
+    "task_success.invalid_policy": "default",
+    "task_success.minimum_evidence": "default",
+    "task_success.practical_threshold": "author",
+    "task_success.regression_direction": "default",
+    "task_success.role": "default",
+    "task_success.uncertainty": "default",
+    "verdict_authority": "default"
+  },
+  "fingerprint": {
+    "dependency_lock": "",
+    "gpu": "",
+    "model_revision": "",
+    "prompt_version": "",
+    "python_executable": "/Users/ruxiz/project/agentseism/.venv/bin/python",
+    "python_implementation": "CPython",
+    "python_version": "3.13.7",
+    "scaffold_version": "",
+    "serving_runtime": ""
+  },
+  "finished": "2026-09-27T00:23:16Z",
+  "name": "main",
+  "results": [
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_0",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 0
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_1",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 1
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_2",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 2
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_3",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 3
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_4",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 4
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_5",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 5
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_6",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 6
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/checkout/trial_7",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/checkout.json",
+      "trial": 7
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_0",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 0
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_1",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 1
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_2",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 2
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_3",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 3
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_4",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 4
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_5",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 5
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_6",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 6
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/refund-request/trial_7",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/refund-request.json",
+      "trial": 7
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_0",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 0
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_1",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 1
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_2",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 2
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_3",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 3
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_4",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 4
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_5",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 5
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_6",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.04,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 6
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/order-status/trial_7",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/order-status.json",
+      "trial": 7
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_0",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 0
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_1",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 1
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_2",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 0
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 2
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_3",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 3
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_4",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 4
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_5",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 5
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_6",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 6
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/address-change/trial_7",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/address-change.json",
+      "trial": 7
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_0",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 0
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_1",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 1
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_2",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 0
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 2
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_3",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 3
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_4",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 4
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_5",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 5
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_6",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 6
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/product-search/trial_7",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/product-search.json",
+      "trial": 7
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_0",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 0
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_1",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 1
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_2",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 2
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_3",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 3
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_4",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 4
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_5",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 5
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_6",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 0
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 6
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/return-label/trial_7",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/return-label.json",
+      "trial": 7
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_0",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 0
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_1",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 1
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_2",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 2
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_3",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 3
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_4",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 4
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_5",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 5
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_6",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 0
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 6
+    },
+    {
+      "artifact_dir": ".agentseism/runs/main/baseline/gift-card/trial_7",
+      "invalid": false,
+      "invalid_reason": "",
+      "outcome": {
+        "success": 1
+      },
+      "returncode": 0,
+      "seconds": 0.03,
+      "stderr": "",
+      "stdout": "",
+      "task": "tasks/gift-card.json",
+      "trial": 7
+    }
+  ],
+  "runner": {
+    "command": "{python} agent/run.py --task {task_file} --out {artifact_dir}"
+  },
+  "started": "2026-09-27T00:23:13Z",
+  "surface_contract": {
+    "evaluator": {
+      "command": "{python} agent/check.py {artifact_dir}"
+    },
+    "features": {
+      "task_success": {
+        "capability_regression": true,
+        "gate": true,
+        "regression_threshold": 0.1
+      }
+    },
+    "runner": {
+      "command": "{python} agent/run.py --task {task_file} --out {artifact_dir}"
+    }
+  },
+  "tasks": [
+    "tasks/checkout.json",
+    "tasks/refund-request.json",
+    "tasks/order-status.json",
+    "tasks/address-change.json",
+    "tasks/product-search.json",
+    "tasks/return-label.json",
+    "tasks/gift-card.json"
+  ],
+  "trials_per_task": 8
+}
